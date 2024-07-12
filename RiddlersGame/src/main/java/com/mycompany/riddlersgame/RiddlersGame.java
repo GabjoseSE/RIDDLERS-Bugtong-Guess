@@ -20,7 +20,7 @@ public class RiddlersGame extends javax.swing.JFrame {
     private Timer timer;
     private int timeLeft = 15;
     private int currentQuestionIndex = 0;
-    private int score = 100; 
+    private int score = 10; 
     private int lives = 5; 
     private int remainingQuestions = 10; 
     private List<Question> currentQuestions;
