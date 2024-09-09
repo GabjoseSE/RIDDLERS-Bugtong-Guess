@@ -2,6 +2,7 @@ package com.mycompany.riddlersgame;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -390,7 +391,7 @@ public class RiddlersGame extends javax.swing.JFrame {
     public void playSound(String soundFilePath) {
     try {
         // Use getResourceAsStream to load the resource
-        InputStream audioStream = getClass().getResourceAsStream(soundFilePath);
+        InputStream audioStream = new BufferedInputStream(getClass().getResourceAsStream(soundFilePath));
         if (audioStream == null) {
             System.err.println("Sound file not found: " + soundFilePath);
             return;

@@ -49,7 +49,7 @@ public class SecondPosHint extends javax.swing.JFrame {
         Hint2Ok.setBorder(null);
         Hint2Ok.setBorderPainted(false);
         Hint2Ok.setContentAreaFilled(false);
-        Hint2Ok.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkCheckButton.png"))); // NOI18N
+        Hint2Ok.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/darkcheckbutton.png"))); // NOI18N
         Hint2Ok.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Hint2OkActionPerformed(evt);

@@ -1,5 +1,6 @@
 package com.mycompany.riddlersgame;
 
+import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import javax.sound.sampled.AudioInputStream;
@@ -23,7 +24,7 @@ public class FirstPosHint extends javax.swing.JFrame {
      private void playSound(String soundFilePath) {
     try {
         // Use getResourceAsStream to load the resource
-        InputStream audioStream = getClass().getResourceAsStream(soundFilePath);
+        InputStream audioStream = new BufferedInputStream(getClass().getResourceAsStream(soundFilePath));
         if (audioStream == null) {
             System.err.println("Sound file not found: " + soundFilePath);
             return;
@@ -76,7 +77,7 @@ public class FirstPosHint extends javax.swing.JFrame {
         Hint1Ok.setBorder(null);
         Hint1Ok.setBorderPainted(false);
         Hint1Ok.setContentAreaFilled(false);
-        Hint1Ok.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkCheckButton.png"))); // NOI18N
+        Hint1Ok.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/darkcheckbutton.png"))); // NOI18N
         Hint1Ok.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Hint1OkActionPerformed(evt);

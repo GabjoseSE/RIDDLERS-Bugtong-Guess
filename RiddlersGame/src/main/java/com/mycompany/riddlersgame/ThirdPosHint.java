@@ -59,7 +59,7 @@ public class ThirdPosHint extends javax.swing.JFrame {
         Hint3Ok.setBorder(null);
         Hint3Ok.setBorderPainted(false);
         Hint3Ok.setContentAreaFilled(false);
-        Hint3Ok.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkCheckButton.png"))); // NOI18N
+        Hint3Ok.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/darkcheckbutton.png"))); // NOI18N
         Hint3Ok.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Hint3OkActionPerformed(evt);

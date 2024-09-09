@@ -34,7 +34,7 @@ public class GameOver extends javax.swing.JFrame {
         yesButton.setBorder(null);
         yesButton.setBorderPainted(false);
         yesButton.setContentAreaFilled(false);
-        yesButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkCheckButton.png"))); // NOI18N
+        yesButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/darkcheckbutton.png"))); // NOI18N
         yesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 yesButtonActionPerformed(evt);
@@ -43,11 +43,11 @@ public class GameOver extends javax.swing.JFrame {
         jPanel1.add(yesButton);
         yesButton.setBounds(490, 290, 130, 110);
 
-        noButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Xbutton.png"))); // NOI18N
+        noButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/xbutton.png"))); // NOI18N
         noButton.setBorder(null);
         noButton.setBorderPainted(false);
         noButton.setContentAreaFilled(false);
-        noButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkXbutton.png"))); // NOI18N
+        noButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/darkxbutton.png"))); // NOI18N
         noButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 noButtonActionPerformed(evt);

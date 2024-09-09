@@ -33,7 +33,7 @@ public class SurpassedAverageLevel extends javax.swing.JFrame {
         YesButton.setBorder(null);
         YesButton.setBorderPainted(false);
         YesButton.setContentAreaFilled(false);
-        YesButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkCheckButton.png"))); // NOI18N
+        YesButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/darkcheckbutton.png"))); // NOI18N
         YesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 YesButtonActionPerformed(evt);
@@ -42,11 +42,11 @@ public class SurpassedAverageLevel extends javax.swing.JFrame {
         jPanel1.add(YesButton);
         YesButton.setBounds(490, 280, 130, 130);
 
-        Nobutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Xbutton.png"))); // NOI18N
+        Nobutton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/xbutton.png"))); // NOI18N
         Nobutton.setBorder(null);
         Nobutton.setBorderPainted(false);
         Nobutton.setContentAreaFilled(false);
-        Nobutton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkXbutton.png"))); // NOI18N
+        Nobutton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/darkxbutton.png"))); // NOI18N
         Nobutton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NobuttonActionPerformed(evt);

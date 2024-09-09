@@ -2,7 +2,7 @@ package com.mycompany.riddlersgame;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.File;
+import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
@@ -67,7 +67,7 @@ public class HintPage extends javax.swing.JFrame {
      private void playSound(String soundFilePath) {
     try {
         // Use getResourceAsStream to load the resource
-        InputStream audioStream = getClass().getResourceAsStream(soundFilePath);
+        InputStream audioStream = new BufferedInputStream(getClass().getResourceAsStream(soundFilePath));
         if (audioStream == null) {
             System.err.println("Sound file not found: " + soundFilePath);
             return;

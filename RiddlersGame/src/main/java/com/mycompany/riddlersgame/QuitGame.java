@@ -1,5 +1,6 @@
 package com.mycompany.riddlersgame;
 
+import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -19,7 +20,7 @@ public class QuitGame extends javax.swing.JFrame {
     private void playSound(String soundFilePath) {
     try {
         // Use getResourceAsStream to load the resource
-        InputStream audioStream = getClass().getResourceAsStream(soundFilePath);
+        InputStream audioStream = new BufferedInputStream(getClass().getResourceAsStream(soundFilePath));
         if (audioStream == null) {
             System.err.println("Sound file not found: " + soundFilePath);
             return;
@@ -62,7 +63,7 @@ public class QuitGame extends javax.swing.JFrame {
         YesButton.setMaximumSize(new java.awt.Dimension(110, 109));
         YesButton.setMinimumSize(new java.awt.Dimension(110, 109));
         YesButton.setPreferredSize(new java.awt.Dimension(110, 109));
-        YesButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkCheckButton.png"))); // NOI18N
+        YesButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/darkcheckbutton.png"))); // NOI18N
         YesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 YesButtonActionPerformed(evt);
@@ -71,11 +72,11 @@ public class QuitGame extends javax.swing.JFrame {
         jPanel1.add(YesButton);
         YesButton.setBounds(490, 290, 130, 110);
 
-        NoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Xbutton.png"))); // NOI18N
+        NoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/xbutton.png"))); // NOI18N
         NoButton.setBorder(null);
         NoButton.setBorderPainted(false);
         NoButton.setContentAreaFilled(false);
-        NoButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkXbutton.png"))); // NOI18N
+        NoButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/darkxbutton.png"))); // NOI18N
         NoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NoButtonActionPerformed(evt);
@@ -84,7 +85,7 @@ public class QuitGame extends javax.swing.JFrame {
         jPanel1.add(NoButton);
         NoButton.setBounds(50, 280, 140, 130);
 
-        quitGamebackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/quitGameBackground.jpg"))); // NOI18N
+        quitGamebackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/quitgamebackground.jpg"))); // NOI18N
         quitGamebackground.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(quitGamebackground);
         quitGamebackground.setBounds(0, 0, 710, 477);

@@ -32,7 +32,7 @@ private RiddlersGame riddlersGame;
         timeUpokButton.setBorder(null);
         timeUpokButton.setBorderPainted(false);
         timeUpokButton.setContentAreaFilled(false);
-        timeUpokButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkCheckButton.png"))); // NOI18N
+        timeUpokButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/darkcheckbutton.png"))); // NOI18N
         timeUpokButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 timeUpokButtonActionPerformed(evt);

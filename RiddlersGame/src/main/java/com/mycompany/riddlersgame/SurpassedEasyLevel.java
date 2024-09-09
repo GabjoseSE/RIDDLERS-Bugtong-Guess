@@ -31,11 +31,11 @@ public class SurpassedEasyLevel extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(678, 477));
         jPanel1.setLayout(null);
 
-        NoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Xbutton.png"))); // NOI18N
+        NoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/xbutton.png"))); // NOI18N
         NoButton.setBorder(null);
         NoButton.setBorderPainted(false);
         NoButton.setContentAreaFilled(false);
-        NoButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkXbutton.png"))); // NOI18N
+        NoButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/darkxbutton.png"))); // NOI18N
         NoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NoButtonActionPerformed(evt);
@@ -48,7 +48,7 @@ public class SurpassedEasyLevel extends javax.swing.JFrame {
         YesButton.setBorder(null);
         YesButton.setBorderPainted(false);
         YesButton.setContentAreaFilled(false);
-        YesButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkCheckButton.png"))); // NOI18N
+        YesButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/darkcheckbutton.png"))); // NOI18N
         YesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 YesButtonActionPerformed(evt);

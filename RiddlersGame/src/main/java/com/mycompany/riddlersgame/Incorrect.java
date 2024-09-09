@@ -39,7 +39,8 @@ private static Incorrect incorrectFrame;
         OkButtonincorrect.setBorder(null);
         OkButtonincorrect.setBorderPainted(false);
         OkButtonincorrect.setContentAreaFilled(false);
-        OkButtonincorrect.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkCheckButton.png"))); // NOI18N
+        OkButtonincorrect.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/darkcheckbutton.png"))); // NOI18N
+        OkButtonincorrect.setVerifyInputWhenFocusTarget(false);
         OkButtonincorrect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 OkButtonincorrectActionPerformed(evt);

@@ -18,11 +18,11 @@ public class HomePage extends javax.swing.JFrame {
     if (backgroundMusic == null || !backgroundMusic.isRunning()) {
     try {
         // Use getResourceAsStream to load the resource
-        InputStream audioStream = getClass().getResourceAsStream("/sfx/-12372.wav");
-        if (audioStream == null) {
-            System.err.println("Audio file not found!");
-            return;
-        }
+        InputStream audioStream = new BufferedInputStream(getClass().getResourceAsStream("/sfx/-12372.wav"));
+                if (audioStream == null) {
+                    System.err.println("Audio file not found!");
+                    return;
+                }
         
         AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(audioStream);
         backgroundMusic = AudioSystem.getClip();
@@ -50,7 +50,7 @@ public class HomePage extends javax.swing.JFrame {
     private void playSound(String soundFilePath) {
     try {
         // Use getResourceAsStream to load the resource
-        InputStream audioStream = getClass().getResourceAsStream(soundFilePath);
+        InputStream audioStream = new BufferedInputStream(getClass().getResourceAsStream(soundFilePath));
         if (audioStream == null) {
             System.err.println("Sound file not found: " + soundFilePath);
             return;

@@ -91,7 +91,7 @@
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/DarkCheckButton.png"/>
+              <Image iconType="3" name="/images/darkcheckbutton.png"/>
             </Property>
           </Properties>
           <Events>

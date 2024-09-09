@@ -38,7 +38,7 @@ public class InsufficientFund extends javax.swing.JFrame {
         OkButton.setBorder(null);
         OkButton.setBorderPainted(false);
         OkButton.setContentAreaFilled(false);
-        OkButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkCheckButton.png"))); // NOI18N
+        OkButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/darkcheckbutton.png"))); // NOI18N
         OkButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 OkButtonActionPerformed(evt);
