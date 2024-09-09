@@ -30,11 +30,11 @@ public class GameOver extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(678, 477));
         jPanel1.setLayout(null);
 
-        yesButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\checkbutton.png")); // NOI18N
+        yesButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkbutton.png"))); // NOI18N
         yesButton.setBorder(null);
         yesButton.setBorderPainted(false);
         yesButton.setContentAreaFilled(false);
-        yesButton.setSelectedIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\DarkCheckButton.png")); // NOI18N
+        yesButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkCheckButton.png"))); // NOI18N
         yesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 yesButtonActionPerformed(evt);
@@ -43,11 +43,11 @@ public class GameOver extends javax.swing.JFrame {
         jPanel1.add(yesButton);
         yesButton.setBounds(490, 290, 130, 110);
 
-        noButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\Xbutton.png")); // NOI18N
+        noButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Xbutton.png"))); // NOI18N
         noButton.setBorder(null);
         noButton.setBorderPainted(false);
         noButton.setContentAreaFilled(false);
-        noButton.setSelectedIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\DarkXbutton.png")); // NOI18N
+        noButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkXbutton.png"))); // NOI18N
         noButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 noButtonActionPerformed(evt);
@@ -57,9 +57,9 @@ public class GameOver extends javax.swing.JFrame {
         noButton.setBounds(50, 280, 140, 130);
 
         GameOverBackground.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        GameOverBackground.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\GameOver.jpg")); // NOI18N
+        GameOverBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/gameoverbackground.jpg"))); // NOI18N
         jPanel1.add(GameOverBackground);
-        GameOverBackground.setBounds(0, 0, 678, 477);
+        GameOverBackground.setBounds(0, 0, 680, 480);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 678, 477);
@@ -69,7 +69,7 @@ public class GameOver extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void yesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_yesButtonActionPerformed
-        riddlersGame.playSound("D:\\Button sound.wav");
+        riddlersGame.playSound("/sfx/Button sound.wav");
         HomePage homePage = new HomePage();
         setVisible(false); 
         homePage.setVisible(true);
@@ -78,7 +78,7 @@ public class GameOver extends javax.swing.JFrame {
     }//GEN-LAST:event_yesButtonActionPerformed
 
     private void noButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_noButtonActionPerformed
-        riddlersGame.playSound("D:\\Button sound.wav");
+        riddlersGame.playSound("/sfx/Button sound.wav");
         QuitGame quitGame = new QuitGame();
         quitGame.setVisible(true);
         dispose(); 

@@ -45,11 +45,11 @@ public class SecondPosHint extends javax.swing.JFrame {
         jPanel1.add(SecondPosHintLabel);
         SecondPosHintLabel.setBounds(150, 150, 401, 244);
 
-        Hint2Ok.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\checkbutton.png")); // NOI18N
+        Hint2Ok.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkbutton.png"))); // NOI18N
         Hint2Ok.setBorder(null);
         Hint2Ok.setBorderPainted(false);
         Hint2Ok.setContentAreaFilled(false);
-        Hint2Ok.setSelectedIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\DarkCheckButton.png")); // NOI18N
+        Hint2Ok.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkCheckButton.png"))); // NOI18N
         Hint2Ok.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Hint2OkActionPerformed(evt);
@@ -58,7 +58,7 @@ public class SecondPosHint extends javax.swing.JFrame {
         jPanel1.add(Hint2Ok);
         Hint2Ok.setBounds(520, 340, 160, 140);
 
-        Hint2background.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\Hint.jpg")); // NOI18N
+        Hint2background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/hintbackground.jpg"))); // NOI18N
         jPanel1.add(Hint2background);
         Hint2background.setBounds(0, -40, 750, 560);
 

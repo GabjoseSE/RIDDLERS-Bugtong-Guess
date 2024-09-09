@@ -55,7 +55,7 @@
         <Component class="javax.swing.JButton" name="YesButton">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\checkbutton.png"/>
+              <Image iconType="3" name="/images/checkbutton.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -72,7 +72,7 @@
               <Dimension value="[110, 109]"/>
             </Property>
             <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="D:\DarkCheckButton.png"/>
+              <Image iconType="3" name="/images/DarkCheckButton.png"/>
             </Property>
           </Properties>
           <Events>
@@ -87,7 +87,7 @@
         <Component class="javax.swing.JButton" name="NoButton">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Gabriel Esperanza\OneDrive - DEPED REGION 1\Documents\NetBeansProjects\RiddlersGame\src\main\java\images\Xbutton.png"/>
+              <Image iconType="3" name="/images/Xbutton.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -95,7 +95,7 @@
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Gabriel Esperanza\OneDrive - DEPED REGION 1\Documents\NetBeansProjects\RiddlersGame\src\main\java\images\DarkXbutton.png"/>
+              <Image iconType="3" name="/images/DarkXbutton.png"/>
             </Property>
           </Properties>
           <Events>
@@ -110,7 +110,7 @@
         <Component class="javax.swing.JLabel" name="quitGamebackground">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Gabriel Esperanza\OneDrive - DEPED REGION 1\Documents\NetBeansProjects\RiddlersGame\src\main\java\images\quitGameBackground.jpg"/>
+              <Image iconType="3" name="/images/quitGameBackground.jpg"/>
             </Property>
             <Property name="horizontalTextPosition" type="int" value="0"/>
           </Properties>

@@ -2,6 +2,7 @@ package com.mycompany.riddlersgame;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
@@ -15,17 +16,24 @@ public class aboutPage extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }
     
-    public void playSound(String soundFilePath) {
+    private void playSound(String soundFilePath) {
     try {
-        File soundFile = new File(soundFilePath);
-        AudioInputStream audioStream = AudioSystem.getAudioInputStream(soundFile);
+        // Use getResourceAsStream to load the resource
+        InputStream audioStream = getClass().getResourceAsStream(soundFilePath);
+        if (audioStream == null) {
+            System.err.println("Sound file not found: " + soundFilePath);
+            return;
+        }
+
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(audioStream);
         Clip soundClip = AudioSystem.getClip();
-        soundClip.open(audioStream);
+        soundClip.open(audioInputStream);
         soundClip.start();
     } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
         ex.printStackTrace();
     }
 }
+
  
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -44,11 +52,11 @@ public class aboutPage extends javax.swing.JFrame {
 
         jPanel1.setLayout(null);
 
-        homeButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\homebuttonwhite.png")); // NOI18N
+        homeButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/homebuttonwhite.png"))); // NOI18N
         homeButton.setBorder(null);
         homeButton.setBorderPainted(false);
         homeButton.setContentAreaFilled(false);
-        homeButton.setSelectedIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\hombuttondark.png")); // NOI18N
+        homeButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/homebuttonbaleg.png"))); // NOI18N
         homeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 homeButtonActionPerformed(evt);
@@ -57,9 +65,9 @@ public class aboutPage extends javax.swing.JFrame {
         jPanel1.add(homeButton);
         homeButton.setBounds(610, 10, 60, 60);
 
-        aboutPage.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\aboutpage (2).jpg")); // NOI18N
+        aboutPage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aboutpagebackground.jpg"))); // NOI18N
         jPanel1.add(aboutPage);
-        aboutPage.setBounds(0, 0, 678, 477);
+        aboutPage.setBounds(0, 0, 690, 480);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 680, 480);
@@ -69,7 +77,7 @@ public class aboutPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void homeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeButtonActionPerformed
-    playSound("D:\\Button sound.wav");
+    playSound("/sfx/Button sound.wav");
     HomePage homepage = new HomePage();
     homepage.show(); 
     dispose();

@@ -1,5 +1,13 @@
 package com.mycompany.riddlersgame;
 
+import java.io.IOException;
+import java.io.InputStream;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+import javax.sound.sampled.UnsupportedAudioFileException;
+
 public class FirstPosHint extends javax.swing.JFrame {
     private String hint;
     private String imagePath;
@@ -11,6 +19,24 @@ public class FirstPosHint extends javax.swing.JFrame {
         setVisible(true);
         FirstPosHintLabel.setText(hint); 
     }
+    
+     private void playSound(String soundFilePath) {
+    try {
+        // Use getResourceAsStream to load the resource
+        InputStream audioStream = getClass().getResourceAsStream(soundFilePath);
+        if (audioStream == null) {
+            System.err.println("Sound file not found: " + soundFilePath);
+            return;
+        }
+
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(audioStream);
+        Clip soundClip = AudioSystem.getClip();
+        soundClip.open(audioInputStream);
+        soundClip.start();
+    } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
+        ex.printStackTrace();
+    }
+}
 
 
    
@@ -45,12 +71,12 @@ public class FirstPosHint extends javax.swing.JFrame {
         jPanel1.add(FirstPosHintLabel);
         FirstPosHintLabel.setBounds(150, 150, 401, 244);
 
-        Hint1Ok.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\checkbutton.png")); // NOI18N
+        Hint1Ok.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkbutton.png"))); // NOI18N
         Hint1Ok.setToolTipText("");
         Hint1Ok.setBorder(null);
         Hint1Ok.setBorderPainted(false);
         Hint1Ok.setContentAreaFilled(false);
-        Hint1Ok.setSelectedIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\DarkCheckButton.png")); // NOI18N
+        Hint1Ok.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkCheckButton.png"))); // NOI18N
         Hint1Ok.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Hint1OkActionPerformed(evt);
@@ -59,7 +85,7 @@ public class FirstPosHint extends javax.swing.JFrame {
         jPanel1.add(Hint1Ok);
         Hint1Ok.setBounds(520, 340, 160, 140);
 
-        Hint1background.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\Hint.jpg")); // NOI18N
+        Hint1background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/hintbackground.jpg"))); // NOI18N
         Hint1background.setText("jLabel1");
         jPanel1.add(Hint1background);
         Hint1background.setBounds(0, -10, 680, 500);
@@ -71,6 +97,7 @@ public class FirstPosHint extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void Hint1OkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Hint1OkActionPerformed
+    playSound("/sfx/Button sound.wav");
     dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_Hint1OkActionPerformed
 

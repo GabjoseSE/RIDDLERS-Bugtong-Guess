@@ -35,11 +35,11 @@ public int earnedPoints;
         jPanel1.setPreferredSize(new java.awt.Dimension(678, 477));
         jPanel1.setLayout(null);
 
-        OkButtoncorrect.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\checkbutton.png")); // NOI18N
+        OkButtoncorrect.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkbutton.png"))); // NOI18N
         OkButtoncorrect.setBorder(null);
         OkButtoncorrect.setBorderPainted(false);
         OkButtoncorrect.setContentAreaFilled(false);
-        OkButtoncorrect.setSelectedIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\DarkCheckButton.png")); // NOI18N
+        OkButtoncorrect.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/darkcheckbutton.png"))); // NOI18N
         OkButtoncorrect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 OkButtoncorrectActionPerformed(evt);
@@ -56,10 +56,10 @@ public int earnedPoints;
         jPanel1.add(earnedPointLabel);
         earnedPointLabel.setBounds(330, 220, 110, 80);
 
-        CorrectBackground.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\Correct Background.jpg")); // NOI18N
+        CorrectBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/correctbackground.jpg"))); // NOI18N
         CorrectBackground.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(CorrectBackground);
-        CorrectBackground.setBounds(0, 0, 710, 477);
+        CorrectBackground.setBounds(0, 0, 710, 480);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 678, 477);
@@ -69,7 +69,7 @@ public int earnedPoints;
     }// </editor-fold>//GEN-END:initComponents
 
     private void OkButtoncorrectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OkButtoncorrectActionPerformed
-    riddlersGame.playSound("D:\\Button sound.wav");
+    riddlersGame.playSound("/sfx/Button sound.wav");
     riddlersGame.updateScore(earnedPoints); // Update the score in the RiddlersGame class
     riddlersGame.setEnabled(true);
     riddlersGame.moveToNextQuestion();

@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -63,17 +64,24 @@ public class HintPage extends javax.swing.JFrame {
         });
     }
     
-    public void playSound(String soundFilePath) {
+     private void playSound(String soundFilePath) {
     try {
-        File soundFile = new File(soundFilePath);
-        AudioInputStream audioStream = AudioSystem.getAudioInputStream(soundFile);
+        // Use getResourceAsStream to load the resource
+        InputStream audioStream = getClass().getResourceAsStream(soundFilePath);
+        if (audioStream == null) {
+            System.err.println("Sound file not found: " + soundFilePath);
+            return;
+        }
+
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(audioStream);
         Clip soundClip = AudioSystem.getClip();
-        soundClip.open(audioStream);
+        soundClip.open(audioInputStream);
         soundClip.start();
     } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
         ex.printStackTrace();
     }
 }
+
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -135,7 +143,7 @@ public class HintPage extends javax.swing.JFrame {
         hintButton1.setBounds(280, 190, 120, 130);
 
         HintPageBackground.setBackground(new java.awt.Color(0, 0, 0));
-        HintPageBackground.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\HINT .jpg")); // NOI18N
+        HintPageBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pickahintbackground.jpg"))); // NOI18N
         HintPageBackground.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(HintPageBackground);
         HintPageBackground.setBounds(0, 0, 710, 477);
@@ -147,17 +155,17 @@ public class HintPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void hintButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hintButton2ActionPerformed
-        playSound("D:\\Button sound.wav");
+        playSound("/sfx/Button sound.wav");
 
     }//GEN-LAST:event_hintButton2ActionPerformed
 
     private void hintButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hintButton1ActionPerformed
-        playSound("D:\\Button sound.wav");
+        playSound("/sfx/Button sound.wav");
 
     }//GEN-LAST:event_hintButton1ActionPerformed
 
     private void hintButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hintButton3ActionPerformed
-        playSound("D:\\Button sound.wav");
+        playSound("/sfx/Button sound.wav");
 
     }//GEN-LAST:event_hintButton3ActionPerformed
 

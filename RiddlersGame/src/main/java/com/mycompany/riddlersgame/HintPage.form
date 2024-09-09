@@ -123,7 +123,7 @@
               <Color blue="0" green="0" red="0" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Gabriel Esperanza\OneDrive - DEPED REGION 1\Documents\NetBeansProjects\RiddlersGame\src\main\java\images\HINT .jpg"/>
+              <Image iconType="3" name="/images/pickahintbackground.jpg"/>
             </Property>
             <Property name="horizontalTextPosition" type="int" value="0"/>
           </Properties>

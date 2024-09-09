@@ -80,7 +80,7 @@
         <Component class="javax.swing.JButton" name="Hint1Ok">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Gabriel Esperanza\OneDrive - DEPED REGION 1\Documents\NetBeansProjects\RiddlersGame\src\main\java\images\checkbutton.png"/>
+              <Image iconType="3" name="/images/checkbutton.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -89,7 +89,7 @@
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Gabriel Esperanza\OneDrive - DEPED REGION 1\Documents\NetBeansProjects\RiddlersGame\src\main\java\images\DarkCheckButton.png"/>
+              <Image iconType="3" name="/images/DarkCheckButton.png"/>
             </Property>
           </Properties>
           <Events>
@@ -104,7 +104,7 @@
         <Component class="javax.swing.JLabel" name="Hint1background">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Gabriel Esperanza\OneDrive - DEPED REGION 1\Documents\NetBeansProjects\RiddlersGame\src\main\java\images\Hint.jpg"/>
+              <Image iconType="3" name="/images/hintbackground.jpg"/>
             </Property>
             <Property name="text" type="java.lang.String" value="jLabel1"/>
           </Properties>

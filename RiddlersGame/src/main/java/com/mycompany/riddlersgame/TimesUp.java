@@ -28,11 +28,11 @@ private RiddlersGame riddlersGame;
         jPanel1.setPreferredSize(new java.awt.Dimension(678, 477));
         jPanel1.setLayout(null);
 
-        timeUpokButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\checkbutton.png")); // NOI18N
+        timeUpokButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkbutton.png"))); // NOI18N
         timeUpokButton.setBorder(null);
         timeUpokButton.setBorderPainted(false);
         timeUpokButton.setContentAreaFilled(false);
-        timeUpokButton.setSelectedIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\DarkCheckButton.png")); // NOI18N
+        timeUpokButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkCheckButton.png"))); // NOI18N
         timeUpokButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 timeUpokButtonActionPerformed(evt);
@@ -41,10 +41,10 @@ private RiddlersGame riddlersGame;
         jPanel1.add(timeUpokButton);
         timeUpokButton.setBounds(520, 270, 110, 110);
 
-        timesUpBackground.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\timesup.jpg")); // NOI18N
+        timesUpBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/timesup.jpg"))); // NOI18N
         timesUpBackground.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(timesUpBackground);
-        timesUpBackground.setBounds(0, 0, 710, 477);
+        timesUpBackground.setBounds(0, 0, 710, 480);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 678, 477);
@@ -54,7 +54,7 @@ private RiddlersGame riddlersGame;
     }// </editor-fold>//GEN-END:initComponents
 
     private void timeUpokButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_timeUpokButtonActionPerformed
-        riddlersGame.playSound("D:\\Button sound.wav");
+        riddlersGame.playSound("/sfx/Button sound.wav");
         riddlersGame.setEnabled(true);
         dispose();
         riddlersGame.moveToNextQuestion();

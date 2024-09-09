@@ -61,7 +61,7 @@
         <Component class="javax.swing.JButton" name="OkButton">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Gabriel Esperanza\OneDrive - DEPED REGION 1\Documents\NetBeansProjects\RiddlersGame\src\main\java\images\checkbutton.png"/>
+              <Image iconType="3" name="/images/checkbutton.png"/>
             </Property>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="null"/>
@@ -69,7 +69,7 @@
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="contentAreaFilled" type="boolean" value="false"/>
             <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Gabriel Esperanza\OneDrive - DEPED REGION 1\Documents\NetBeansProjects\RiddlersGame\src\main\java\images\DarkCheckButton.png"/>
+              <Image iconType="3" name="/images/DarkCheckButton.png"/>
             </Property>
           </Properties>
           <Events>
@@ -85,12 +85,12 @@
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\Gabriel Esperanza\OneDrive - DEPED REGION 1\Documents\NetBeansProjects\RiddlersGame\src\main\java\images\InsufficientFund.jpg"/>
+              <Image iconType="3" name="/images/insufficientfundbackground.jpg"/>
             </Property>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="0" width="-1" height="-1"/>
+              <AbsoluteConstraints x="0" y="0" width="680" height="480"/>
             </Constraint>
           </Constraints>
         </Component>

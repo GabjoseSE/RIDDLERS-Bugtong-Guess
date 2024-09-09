@@ -17,11 +17,12 @@ public class ThirdPosHint extends javax.swing.JFrame {
     }
 
     private void setImageHint(String imagePath) {
-        ImageIcon icon = new ImageIcon(imagePath);
-        // Resize the image to fit the label
-        icon = new ImageIcon(icon.getImage().getScaledInstance(ThirdPosHintLabel.getWidth(), ThirdPosHintLabel.getHeight(), java.awt.Image.SCALE_SMOOTH));
-        ThirdPosHintLabel.setIcon(icon);     
+    ImageIcon icon = new ImageIcon(getClass().getResource(imagePath));
+    // Resize the image to fit the label
+    icon = new ImageIcon(icon.getImage().getScaledInstance(ThirdPosHintLabel.getWidth(), ThirdPosHintLabel.getHeight(), java.awt.Image.SCALE_SMOOTH));
+    ThirdPosHintLabel.setIcon(icon);
 }
+
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -36,7 +37,6 @@ public class ThirdPosHint extends javax.swing.JFrame {
         setLocationByPlatform(true);
         setMinimumSize(new java.awt.Dimension(678, 477));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(678, 470));
         setResizable(false);
         getContentPane().setLayout(null);
 
@@ -55,11 +55,11 @@ public class ThirdPosHint extends javax.swing.JFrame {
         jPanel1.add(ThirdPosHintLabel);
         ThirdPosHintLabel.setBounds(140, 150, 400, 243);
 
-        Hint3Ok.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\checkbutton.png")); // NOI18N
+        Hint3Ok.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkbutton.png"))); // NOI18N
         Hint3Ok.setBorder(null);
         Hint3Ok.setBorderPainted(false);
         Hint3Ok.setContentAreaFilled(false);
-        Hint3Ok.setSelectedIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\DarkCheckButton.png")); // NOI18N
+        Hint3Ok.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkCheckButton.png"))); // NOI18N
         Hint3Ok.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Hint3OkActionPerformed(evt);
@@ -68,7 +68,7 @@ public class ThirdPosHint extends javax.swing.JFrame {
         jPanel1.add(Hint3Ok);
         Hint3Ok.setBounds(520, 340, 160, 140);
 
-        Hint3background.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\Hint.jpg")); // NOI18N
+        Hint3background.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/hintbackground.jpg"))); // NOI18N
         Hint3background.setText("jLabel1");
         jPanel1.add(Hint3background);
         Hint3background.setBounds(0, -10, 680, 490);

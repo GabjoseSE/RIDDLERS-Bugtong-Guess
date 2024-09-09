@@ -31,11 +31,11 @@ public class SurpassedEasyLevel extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(678, 477));
         jPanel1.setLayout(null);
 
-        NoButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\Xbutton.png")); // NOI18N
+        NoButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Xbutton.png"))); // NOI18N
         NoButton.setBorder(null);
         NoButton.setBorderPainted(false);
         NoButton.setContentAreaFilled(false);
-        NoButton.setSelectedIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\DarkXbutton.png")); // NOI18N
+        NoButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkXbutton.png"))); // NOI18N
         NoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NoButtonActionPerformed(evt);
@@ -44,11 +44,11 @@ public class SurpassedEasyLevel extends javax.swing.JFrame {
         jPanel1.add(NoButton);
         NoButton.setBounds(50, 280, 140, 130);
 
-        YesButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\checkbutton.png")); // NOI18N
+        YesButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkbutton.png"))); // NOI18N
         YesButton.setBorder(null);
         YesButton.setBorderPainted(false);
         YesButton.setContentAreaFilled(false);
-        YesButton.setSelectedIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\DarkCheckButton.png")); // NOI18N
+        YesButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkCheckButton.png"))); // NOI18N
         YesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 YesButtonActionPerformed(evt);
@@ -57,9 +57,9 @@ public class SurpassedEasyLevel extends javax.swing.JFrame {
         jPanel1.add(YesButton);
         YesButton.setBounds(490, 290, 130, 110);
 
-        surpassedEasyBackground.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\SurpasssedEasyLevel.jpg")); // NOI18N
+        surpassedEasyBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/surpasssedeasylevelbackground.jpg"))); // NOI18N
         jPanel1.add(surpassedEasyBackground);
-        surpassedEasyBackground.setBounds(0, 0, 710, 477);
+        surpassedEasyBackground.setBounds(0, 0, 710, 480);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 678, 477);

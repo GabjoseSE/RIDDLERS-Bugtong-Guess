@@ -2,6 +2,7 @@ package com.mycompany.riddlersgame;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
@@ -17,12 +18,18 @@ public class FinishedGame extends javax.swing.JFrame {
         initComponents();
     }
 
-    public void playSound(String soundFilePath) {
+     private void playSound(String soundFilePath) {
     try {
-        File soundFile = new File(soundFilePath);
-        AudioInputStream audioStream = AudioSystem.getAudioInputStream(soundFile);
+        // Use getResourceAsStream to load the resource
+        InputStream audioStream = getClass().getResourceAsStream(soundFilePath);
+        if (audioStream == null) {
+            System.err.println("Sound file not found: " + soundFilePath);
+            return;
+        }
+
+        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(audioStream);
         Clip soundClip = AudioSystem.getClip();
-        soundClip.open(audioStream);
+        soundClip.open(audioInputStream);
         soundClip.start();
     } catch (UnsupportedAudioFileException | IOException | LineUnavailableException ex) {
         ex.printStackTrace();
@@ -48,11 +55,11 @@ public class FinishedGame extends javax.swing.JFrame {
         jPanel1.setPreferredSize(new java.awt.Dimension(678, 477));
         jPanel1.setLayout(null);
 
-        okButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\checkbutton.png")); // NOI18N
+        okButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkbutton.png"))); // NOI18N
         okButton.setBorder(null);
         okButton.setBorderPainted(false);
         okButton.setContentAreaFilled(false);
-        okButton.setSelectedIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\DarkCheckButton.png")); // NOI18N
+        okButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkCheckButton.png"))); // NOI18N
         okButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 okButtonActionPerformed(evt);
@@ -61,7 +68,7 @@ public class FinishedGame extends javax.swing.JFrame {
         jPanel1.add(okButton);
         okButton.setBounds(490, 290, 130, 110);
 
-        FinishedGameBackground.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\FinishedGame.jpg")); // NOI18N
+        FinishedGameBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/finishedgamebackground.jpg"))); // NOI18N
         FinishedGameBackground.setText("jLabel1");
         FinishedGameBackground.setPreferredSize(new java.awt.Dimension(678, 477));
         jPanel1.add(FinishedGameBackground);
@@ -74,7 +81,7 @@ public class FinishedGame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void okButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okButtonActionPerformed
-        playSound("D:\\Button sound.wav");
+        playSound("/sfx/Button sound.wav");
         HomePage homePage = new HomePage();
         setVisible(false); 
         homePage.setVisible(true);

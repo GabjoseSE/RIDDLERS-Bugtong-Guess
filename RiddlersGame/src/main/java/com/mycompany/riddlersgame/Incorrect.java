@@ -30,15 +30,16 @@ private static Incorrect incorrectFrame;
         setResizable(false);
         getContentPane().setLayout(null);
 
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
         jPanel1.setMinimumSize(new java.awt.Dimension(678, 470));
         jPanel1.setPreferredSize(new java.awt.Dimension(678, 477));
         jPanel1.setLayout(null);
 
-        OkButtonincorrect.setIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\checkbutton.png")); // NOI18N
+        OkButtonincorrect.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/checkbutton.png"))); // NOI18N
         OkButtonincorrect.setBorder(null);
         OkButtonincorrect.setBorderPainted(false);
         OkButtonincorrect.setContentAreaFilled(false);
-        OkButtonincorrect.setSelectedIcon(new javax.swing.ImageIcon("C:\\Users\\Gabriel Esperanza\\OneDrive - DEPED REGION 1\\Documents\\NetBeansProjects\\RiddlersGame\\src\\main\\java\\images\\DarkCheckButton.png")); // NOI18N
+        OkButtonincorrect.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/images/DarkCheckButton.png"))); // NOI18N
         OkButtonincorrect.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 OkButtonincorrectActionPerformed(evt);
@@ -47,10 +48,10 @@ private static Incorrect incorrectFrame;
         jPanel1.add(OkButtonincorrect);
         OkButtonincorrect.setBounds(520, 270, 113, 110);
 
-        IncorrectBackground.setIcon(new javax.swing.ImageIcon("D:\\incorrect.jpg")); // NOI18N
+        IncorrectBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/incorrectbackground.jpg"))); // NOI18N
         IncorrectBackground.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(IncorrectBackground);
-        IncorrectBackground.setBounds(0, 0, 710, 477);
+        IncorrectBackground.setBounds(0, 0, 710, 480);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 678, 477);
@@ -60,7 +61,7 @@ private static Incorrect incorrectFrame;
     }// </editor-fold>//GEN-END:initComponents
 
     private void OkButtonincorrectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OkButtonincorrectActionPerformed
-    riddlersGame.playSound("D:\\Button sound.wav");
+    riddlersGame.playSound("/sfx/Button sound.wav");
     riddlersGame.decrementLives();
     riddlersGame.moveToNextQuestion();
     riddlersGame.setEnabled(true);
