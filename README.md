@@ -4,7 +4,7 @@ Riddlers: Bugtong Guess is a standalone Java application designed to entertain u
 
 ## Installation
 
-Use the package manager [GOOGLE DRIVE](https://drive.google.com/file/d/133HpgX_4ZmDzzCUGLY9tm3cUHRb5npvj/view?usp=sharing) to install Riddler: Bugtong Guess.
+Use the package manager [GOOGLE DRIVE]([https://drive.google.com/file/d/133HpgX_4ZmDzzCUGLY9tm3cUHRb5npvj/view?usp=sharing](https://drive.google.com/drive/folders/1JQL4sc3jGqoFoULFYJeaern6Qu1zoW2q?usp=sharing)) to install Riddler: Bugtong Guess.
 
 ## Objectives
  • Riddle Presentation: Present riddles in an engaging and interactive manner.
